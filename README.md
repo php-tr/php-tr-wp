@@ -1,4 +1,4 @@
-php-tr-wp
+php-tr wordpress
 =========
 
-php-tr-wp
+php-tr wordpress web sitesi
