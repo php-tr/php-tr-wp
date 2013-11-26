@@ -1,0 +1,15 @@
+/*
+Theme Name: PHP Manual
+Theme URI: http://tufyta.com/wp/phpmanual
+Author: Tufan Barış YILDIRIM
+Author URI: http://tufanbarisyildirim.com/
+Description: PHP Manual theme for Wordpress
+Version: 1.0
+License: GNU General Public License v2 or later
+Tags: php
+Text Domain: tufyta.com
+*/
+@import url("assets/styles/reset.css");
+@import url("assets/styles/theme.css");
+@import url("assets/styles/doc.css");
+@import url("assets/styles/home.css");
