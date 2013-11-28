@@ -14,7 +14,7 @@
                     <div eclass='entry-content description'>
                         <abbr class='published newsdate' title='<?php the_date_xml(); ?>'><?php the_date(); ?></abbr>
                         <div>
-                            <?php the_content( __( 'More <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?>
+                            <?php the_content( __( 'More <span class="meta-nav">&rarr;</span>', 'phpmanual' ) ); ?>
                         </div>
 
                     </div>
