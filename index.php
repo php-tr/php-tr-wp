@@ -17,7 +17,7 @@
                         </div>
                     </div>
                     <?php endwhile; ?>
-                <p class='newsArchive'><a href='/archive/'>More news &raquo;</a></p>
+                <div class="newsArchive"><p><?php echo  posts_nav_link(); ?></p></div>
             </div>
         </div>
         <?php else: ?>
