@@ -108,7 +108,7 @@
                 </div>
                 <?php endif; ?>
         </li>
-        <?php foreach($menu_items as $menu_item): if($menu_item->menu_item_parent != 0) continue; ?>
+        <?php if($menu_items) foreach($menu_items as $menu_item): if($menu_item->menu_item_parent != 0) continue; ?>
             <li class="parent ">
                 <a href="<?php echo $menu_item->url; ?>" class="menu-link"><?php echo $menu_item->title; ?></a>
                 <div class="children" id="menu_<?php echo $menu_item->ID; ?>">
