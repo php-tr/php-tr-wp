@@ -24,15 +24,14 @@
                 // Proceed with normal comments.
                 global $post;
             ?>
-
-            <!-- PHP manual Template from http://php.net/manual/en/language.basic-syntax.php -->
+           
             <a name="<?php comment_ID(); ?>"></a>
             <div <?php comment_class('note');?>>  <div class="votes">
                     <div id="Vu<?php comment_ID(); ?>">
-                        <a href="/manual/vote-note.php?id=57086&amp;page=language.basic-syntax&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+                        <a href="javascript:alert('we have no comment voting system')" title="Vote up!" class="usernotes-voteu">up</a>
                     </div>
                     <div id="Vd<?php comment_ID(); ?>">
-                        <a href="/manual/vote-note.php?id=57086&amp;page=language.basic-syntax&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+                        <a href="javascript:alert('we have no comment voting system')" title="Vote down!" class="usernotes-voted">down</a>
                     </div>
                     <div class="tally" id="V<?php comment_ID(); ?>" title="60% like this...">
                         17
@@ -74,7 +73,7 @@
 <div style="clear: both;"></div>
 <section id="usernotes">
     <div class="head">
-        <span class="action"><a href="/manual/add-note.php?sect=language.basic-syntax&amp;redirect=http://www.php.net/manual/en/language.basic-syntax.php"><img src="http://static.php.net/www.php.net/images/notes-add.gif" alt="add a note" width="13" height="13" class="middle"></a> <small><a href="/manual/add-note.php?sect=language.basic-syntax&amp;redirect=http://www.php.net/manual/en/language.basic-syntax.php">add a note</a></small></span>
+        <span class="action"><a href="#respond"><img src="http://static.php.net/www.php.net/images/notes-add.gif" alt="add a note" width="13" height="13" class="middle"></a> <small><a href="#respond">add a note</a></small></span>
         <h3 class="title"><?php
             printf( _n( 'User Contributed Notes <span class="count"><strong>%1$s note</strong></span>', 'User Contributed Notes <span class="count"><strong>%1$s notes</strong></span>', get_comments_number(), 'phpmanual' ),
                 number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
@@ -104,5 +103,5 @@
         <?php endif; // have_comments() ?>
 
     <?php comment_form(); ?>
-    <div class="foot"><a href="/manual/add-note.php?sect=language.basic-syntax&amp;redirect=http://www.php.net/manual/en/language.basic-syntax.php"><img src="http://static.php.net/www.php.net/images/notes-add.gif" alt="add a note" width="13" height="13" class="middle"></a> <small><a href="/manual/add-note.php?sect=language.basic-syntax&amp;redirect=http://www.php.net/manual/en/language.basic-syntax.php">add a note</a></small></div>
+    <div class="foot"><a href="#respond"><img src="http://static.php.net/www.php.net/images/notes-add.gif" alt="add a note" width="13" height="13" class="middle"></a> <small><a href="#respond">add a note</a></small></div>
 </section>
