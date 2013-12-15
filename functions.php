@@ -1,7 +1,7 @@
 <?php
     add_theme_support( 'post-thumbnails' );
     add_action('admin_head', 'php_admin_head'); 
-    add_action( 'init', 'phpmanual_header_menu' );
+    add_action( 'init', 'register_phptr_menus' );
     add_action("admin_menu", "setup_phpmanual_menu");
     add_action( 'add_meta_boxes', 'documentation_add_custom_box' );
 
@@ -33,7 +33,7 @@
         );
         register_post_type( 'documentation', $args );   
     }
-    
+
     add_action( 'init', 'my_custom_post_documentation' );
 
 
@@ -94,9 +94,10 @@
 
 
 
-    function phpmanual_header_menu() 
+    function register_phptr_menus() 
     {      
         register_nav_menu( 'header_menu', 'Header Menu' );
+        register_nav_menu( 'footer_links', 'Footer Links' );
     }
 
     function php_admin_head()
@@ -131,6 +132,30 @@
         }        
     ?>
     <div class="error-message">"Header Menu" does not contain a navigation menu. Please <a href="<?php echo  get_admin_url()?>nav-menus.php">build</a> and <a href="<?php echo  get_admin_url()?>customize.php">select</a></div>
+    <?php
+    }   
+
+
+    function get_footer_links()
+    {
+        $locations = get_registered_nav_menus();
+        $menus = wp_get_nav_menus();
+        $menu_locations = get_nav_menu_locations();
+
+        $location_id = 'footer_links';
+
+        if (isset($menu_locations[ $location_id ])) 
+        {
+            foreach ($menus as $menu) 
+            {
+                if ($menu->term_id == $menu_locations[ $location_id ]) 
+                {  
+                    return wp_get_nav_menu_items($menu); 
+                }
+            }
+        }        
+    ?>
+    <div class="error-message">"Footer Links" does not contain a navigation menu. Please <a href="<?php echo  get_admin_url()?>nav-menus.php">build</a> and <a href="<?php echo  get_admin_url()?>customize.php">select</a></div>
     <?php
     }      
 
